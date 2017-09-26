@@ -1,21 +1,29 @@
-<!--  menu lateral  -->
-<div class="navbar-fixed-left" ng-controller="menuController">
-  <!---p class="news" ng-click="plusOne($index)"> {{news}}</p!--> 
-  <button value="ComImagens" ng-click = "mudarExibicao()" id="exibicao"><h5>Mudar exibição</h5></button>
-  <br><br><br>
-    <section layout="row" layout-align="left" layout-wrap style=" display: inline-block;">
-        <searching> </searching>
+<!--  menu  -->
+<header class="container" ng-controller="menuController">
+    <section layout="row">
+    <div class="col-md-5"><img src="img/clipper/clipper.png" style="float: left; height: 30px; width: auto; top: 2%; left: 2%"></div>
+    <div class="col-md-10" style="width: auto; height: auto">login</div>
     </section>
+    <section layout="row" style="width: 50%">
+        <div style="border-style: solid; border-width: 2px; height: 20px; float: left;"></div>
+        <!--<searching align="center" style="width: inherit; display: inline-block" > </searching>-->
+    </section>
+    
+  <!--<p class="news" ng-click="plusOne($index)"> {{news}}</p> 
+  <button value="ComImagens" ng-click = "mudarExibicao()" id="exibicao"><h5>Mudar exibição</h5></button>
+  <br><br><br>-->
+    
     <!--  buttons da esquerda -->
     <section layout="row" layout-align="center" layout-wrap align="center">
-      <button><a href="#/clipper" onclick="window.location.reload(true);"><img src="img/clipper/limpar.png"></a>
+      <!--<button><a href="#/clipper" onclick="window.location.reload(true);"><img src="img/clipper/limpar.png"></a>
       </button>
       <button ng-click="filtering()"><img src="img/clipper/filtrar.png">
-      </button>
-</div>
+      </button>-->
+    </section>
+</header>
 
 <div id="conteudo">
-  <img src="img/clipper/title.PNG" style="height: 45px; width: auto">
+  
   <br><br><br>
   <!--  blocos de notícias novas  -->
   <div id="notNovas" ng-controller="gridController" ng-init="limNot = 20; loadData()" >
