@@ -1,17 +1,40 @@
 html,body {
   font-family: arial, helvetica, sans-serif;;
-  background-color: #F2F2F2;
   border: none;
   width: 100%;
-  color:#2B3044;
 }
 
-#conteudo {
-  padding-right: 15%;
-  padding-left: 18%;
-  padding-top: 5%;
-  font-size: 15px;
-  background-color: #F2F2F2;
+header {
+    top: 2%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#conteudo{
+    font-size: 16px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#conteudo-noticia {
+    max-width: 40%;
+    margin-left: 25%;
+    margin-right: 25%;
+  font-size: 16px;
+}
+
+#conteudo-noticia h2{
+    max-width: 60%;
+    margin-bottom: 2.5%;
+    color: #004C84;
+}
+
+#conteudo-noticia a{
+    float: left;
+    font-weight: bold;
+    color: #0072D4;
 }
 
 .navbar-fixed-left {
@@ -96,7 +119,6 @@ input {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;

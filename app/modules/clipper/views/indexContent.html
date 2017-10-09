@@ -1,14 +1,18 @@
-<div id="conteudo" ng-controller="estruturaNoticia">
-  <a href="#/clipper"><img src="img/clipper/title.PNG" style="height: 45px; width: auto"></a>
-  <br><br>
+<header ng-controller="menuController">
+    <section style="display: flex; width: 100%; height: 5%;">
+        <div style="display: inline-block; width:20%; margin: 0;"><img src="img/clipper/clipper.png" style="margin:5%; vertical-align: middle; height: 30px; width: auto;"></div>
+        <button style="display: inline-block; width: 10%; margin-left: 80%">usuário</button>
+        <button style="display: inline-block; width: 10%;">logout</button>
+    </section>
+</header>
+<div id="conteudo-noticia" ng-controller="estruturaNoticia">
   <div class="row" align="justify">
     <!--  conteúdo da notícia  -->
-    <h4 ng-show="{{noticia.name}} === null">[Título indisponível]</h4>
-    <h2>{{noticia.name}}</h2>
-    <p><a href="{{::noticia.url}}" target="_blank">Ir para a notícia</a></p>
-      <p><b>Publicado por <a href="http://{{::site}}" target="_blank" style="display: inline">{{site}}</a> em <b ng-show="{{noticia.datePublished}} === null">[indisponível]</b>{{::noticia.datePublished | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}  e coletado em {{::noticia.dateCreated | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}</b></p>
-      <p ng-bind-html="html"></p><br>
+    <h2 ng-show="{{noticia.name}} === null"><!--[Título indisponível]--></h2>
+    <h2 style=""><strong>{{noticia.name}}</strong></h2>
+    <p><a href="{{::noticia.url}}" target="_blank">{{::noticia.url}}</a></p>
+      <p>Publicado por</p> <a href="http://{{::site}}" target="_blank" style="display: inline">{{site}}</a> em <p ng-show="{{noticia.datePublished}} === null"><!--[indisponível]-->{{::noticia.datePublished | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}  e coletado em {{::noticia.dateCreated | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}</p>
+      <p ng-bind-html="html"></p>
       Tags: <input type="button" value="{{:: keyword}}" ng-repeat = "keyword in noticia.keywords" disabled>
   </div>
 </div>
-<br><br>
