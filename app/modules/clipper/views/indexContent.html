@@ -9,10 +9,11 @@
   <div class="row" align="justify">
     <!--  conteúdo da notícia  -->
     <h2 ng-show="{{noticia.name}} === null"><!--[Título indisponível]--></h2>
-    <h2 style=""><strong>{{noticia.name}}</strong></h2>
-    <p><a href="{{::noticia.url}}" target="_blank">{{::noticia.url}}</a></p>
-      <p>Publicado por</p> <a href="http://{{::site}}" target="_blank" style="display: inline">{{site}}</a> em <p ng-show="{{noticia.datePublished}} === null"><!--[indisponível]-->{{::noticia.datePublished | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}  e coletado em {{::noticia.dateCreated | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}</p>
-      <p ng-bind-html="html"></p>
-      Tags: <input type="button" value="{{:: keyword}}" ng-repeat = "keyword in noticia.keywords" disabled>
+    <h2 style="width: 100%"><strong>{{noticia.name}}</strong></h2>
+    <h3 style="font-size: 20px">{{noticia.description}}</h3>
+    <p style="display: block;"><a href="{{::noticia.url}}" target="_blank">Ir para notícia original</a></p><br>
+      
+    <p>Publicado por</p> <a href="http://{{::site}}" target="_blank" style="display: inline">{{site}}</a><p ng-show="{{noticia.datePublished}} === null">  em <!--[indisponível]-->{{::noticia.datePublished | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}  e coletado em {{::noticia.dateCreated | date:"dd/MM/yyyy 'às' HH'h'mm":'UTC-6'}}</p>
+    <p ng-bind-html="html"></p>Tags: <input type="button" value="{{:: keyword}}" ng-repeat = "keyword in noticia.keywords" disabled>
   </div>
 </div>
