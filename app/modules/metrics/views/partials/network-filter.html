@@ -1,0 +1,11 @@
+<div class="col-md-6">
+  <!--Alterar para usar diretamente do model!-->
+  <div class="col-md-3"></div>
+  <div class="col-md-2"><span>Redes sociais</span></div>
+  <div class="col-md-5">
+    <select ng-model="filter">
+      <option ng-repeat="option in options" value="{{option.value}}">{{option.text}}</option>
+    </select>
+  </div>
+  <div class="col-md-2"></div>
+</div>
